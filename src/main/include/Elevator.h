@@ -5,10 +5,13 @@
 
 class Elevator{
     public:
+        
+        Elevator();
+        void ElevatorBalls(bool ButtThree, bool ButtFour);
 
-        ArcadeVelocityControl();
-        void Elevator(double Twist, double Y);
-        void DriveInit();
+    private:
+
+        rev::CANSparkMax Elevator_motor{5, rev::CANSparkMax::MotorType::kBrushless};
 
 };
 
